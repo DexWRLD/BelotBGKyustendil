@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #2c3e50;
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+#game-table {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    min-width: 900px;
+    background: radial-gradient(circle, #3a5d7a 60%, #2c3e50 100%);
+}
+#scoreboard {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 10;
+}
+#score-nie, #score-vie {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#score-nie span, #score-vie span {
+    font-size: 28px;
+    font-weight: bold;
+}
+.player-info {
+    position: absolute;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-size: 16px;
+    min-width: 80px;
+    text-align: center;
+}
+#player-info-bottom {
+    left: 50%;
+    bottom: 120px;
+    transform: translateX(-50%);
+}
+#player-info-top {
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+}
+#player-info-left {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#player-info-right {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hand {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    z-index: 5;
+}
+#hand-bottom {
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    flex-direction: row;
+}
+#hand-top {
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    flex-direction: row;
+}
+#hand-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    flex-direction: row;
+    gap: 16px;
+}
+#hand-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    flex-direction: row;
+    gap: 16px;
+}
+.card-img {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    background: #fff;
+    object-fit: contain;
+    margin: 0 2px;
+}
+.card-back {
+    background: #222;
+}
+#center-trick {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 40px;
+    z-index: 20;
+    min-width: 350px;
+    min-height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+#bidding {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 20;
+    text-align: center;
+}
+#game-message {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    z-index: 100;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 8px #000;
+}
+#lobby {
+    background: #27ae60;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    min-width: 320px;
+    text-align: center;
+}
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    width: 70%;
+}
+button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #2980b9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+button:disabled {
+    background: #888;
+    cursor: not-allowed;
+}
+#seat-info, #game-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+#players-list {
+    margin-top: 20px;
+}
+#main-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44,62,80,0.98);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#main-menu h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+#main-menu input[type="text"] {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 18px;
+    width: 240px;
+    text-align: center;
+}
+#main-menu button {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    background: #27ae60;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+#main-menu button:hover {
+    background: #219150;
+}
+#join-error {
+    font-size: 18px;
+}
+#contract-info {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 10;
+    font-size: 16px;
+    text-align: center;
+}
+#contract-info div:first-child {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+#contract-info div:last-child {
+    font-weight: bold;
+} 

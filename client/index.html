@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Белот</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-menu">
+        <h1>Белот</h1>
+        <input type="text" id="name" placeholder="Въведи име">
+        <button id="join">Влез</button>
+        <div id="join-error" style="color:#c00;margin-top:10px;"></div>
+    </div>
+    <div id="game-table" style="display:none;">
+        <div id="scoreboard">
+            <div id="score-nie">НИЕ<span>0</span></div>
+            <div id="score-vie">ВИЕ<span>0</span></div>
+        </div>
+        <div id="player-info-top" class="player-info"></div>
+        <div id="player-info-left" class="player-info"></div>
+        <div id="player-info-right" class="player-info"></div>
+        <div id="player-info-bottom" class="player-info"></div>
+        <div id="hand-top" class="hand"></div>
+        <div id="hand-left" class="hand"></div>
+        <div id="hand-right" class="hand"></div>
+        <div id="hand-bottom" class="hand"></div>
+        <div id="center-trick"></div>
+    </div>
+    <div id="bidding"></div>
+    <div id="game-message"></div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
