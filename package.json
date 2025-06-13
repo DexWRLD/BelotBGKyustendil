@@ -7,7 +7,7 @@
     "start": "node server/index.js",
     "dev": "webpack serve --open",
     "build": "npx webpack --mode production",
-    "vercel-build": "npx webpack --mode production"
+    "postinstall": "chmod +x node_modules/.bin/webpack"
   },
   "keywords": [
     "belot",
