@@ -2,11 +2,12 @@
   "name": "belotlasttry",
   "version": "1.0.0",
   "description": "A web-based implementation of the popular Bulgarian card game Belot",
-  "main": "src/js/game.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "webpack serve --open",
+    "start": "node server/index.js",
+    "dev": "webpack serve --open",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "vercel-build": "webpack --mode production"
   },
   "keywords": [
     "belot",
@@ -25,6 +26,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "socket.io": "^4.8.1"
+    "express": "^4.18.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
   }
 }

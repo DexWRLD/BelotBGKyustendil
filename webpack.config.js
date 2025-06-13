@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: './src/js/game.js',
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    entry: './client/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -22,7 +23,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './client/index.html',
         }),
     ],
     devServer: {
@@ -32,5 +33,11 @@ module.exports = {
         compress: true,
         port: 9001,
         hot: true,
+        proxy: {
+            '/socket.io': {
+                target: 'http://localhost:3000',
+                ws: true
+            }
+        }
     },
 }; 
