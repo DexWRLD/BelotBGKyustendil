@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3001');
+const socket = io('https://belot-backend.onrender.com');
 
 const mainMenu = document.getElementById('main-menu');
 const joinBtn = document.getElementById('join');
