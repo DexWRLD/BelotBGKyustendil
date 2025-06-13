@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "webpack serve --open",
-    "build": "webpack --mode production",
-    "vercel-build": "webpack --mode production"
+    "build": "npx webpack --mode production",
+    "vercel-build": "npx webpack --mode production"
   },
   "keywords": [
     "belot",
